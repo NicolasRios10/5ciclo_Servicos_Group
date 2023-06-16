@@ -1,5 +1,6 @@
 package Certus.edu.pe.msprofesor.controller;
 
+import Certus.edu.pe.msprofesor.dto.CrearProfesorDto;
 import Certus.edu.pe.msprofesor.dto.ProfesorDto;
 import Certus.edu.pe.msprofesor.service.ProfesorService;
 import io.swagger.annotations.ApiOperation;
@@ -28,12 +29,12 @@ public class ProfesorController {
     }
     @ApiOperation(value = "Método para crear un profesor")
     @PostMapping
-    public ResponseEntity<ResponseDto> createProfesor(@RequestBody ProfesorDto profesor){
+    public ResponseEntity<ResponseDto> createProfesor(@RequestBody CrearProfesorDto profesor){
         return ResponseEntity.status(HttpStatus.CREATED).body(profesorService.createProfesor(profesor));
     }
     @ApiOperation(value = "Método para actualizar los profesores")
     @PutMapping
-    public ResponseEntity<ResponseDto> updateProfesor(@RequestBody ProfesorDto profesor){
+    public ResponseEntity<ResponseDto> updateProfesor(@RequestBody CrearProfesorDto profesor){
         return ResponseEntity.status(HttpStatus.CREATED).body(profesorService.updateProfesor(profesor));
     }
     @ApiOperation(value = "Método para eliminar un porfesor")

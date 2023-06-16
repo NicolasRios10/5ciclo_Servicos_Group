@@ -2,6 +2,7 @@ package Certus.edu.pe.msprofesor.service.impl;
 
 
 
+import Certus.edu.pe.msprofesor.dto.CrearProfesorDto;
 import Certus.edu.pe.msprofesor.dto.ProfesorDto;
 import Certus.edu.pe.msprofesor.dto.ResponseDto;
 import Certus.edu.pe.msprofesor.entity.ProfesorEntity;
@@ -62,7 +63,7 @@ public class ProfesorServiceImpl implements ProfesorService{
     }
 
     @Override
-    public ResponseDto createProfesor(ProfesorDto profesor) {
+    public ResponseDto createProfesor(CrearProfesorDto profesor) {
         try {
             ProfesorEntity profesorEntity = ProfesorEntity.builder()
                     .nombre(profesor.getNombre())
@@ -79,7 +80,7 @@ public class ProfesorServiceImpl implements ProfesorService{
     }
 
     @Override
-    public ResponseDto updateProfesor(ProfesorDto profesor) {
+    public ResponseDto updateProfesor(CrearProfesorDto profesor) {
         try {
             ProfesorEntity profesorEntity= profesorRepository.findById(profesor.getId()).orElse(null);
             if(null == profesorEntity) {

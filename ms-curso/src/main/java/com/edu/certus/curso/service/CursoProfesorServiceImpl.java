@@ -52,6 +52,7 @@ public class CursoProfesorServiceImpl implements CursoProfesorService {
                         .estadoCurso(cursoEntity.getEstado())
                         .idProfesor(profesorDto.getId())
                         .nombreProfesor(profesorDto.getNombreCompleto())
+                        .estadoProfesor(profesorDto.getEstado())
                         .build());
             }
             return Util.getResponse(true, Constantes.OPERATION_SUCCESS, listCursoProfesorDto);

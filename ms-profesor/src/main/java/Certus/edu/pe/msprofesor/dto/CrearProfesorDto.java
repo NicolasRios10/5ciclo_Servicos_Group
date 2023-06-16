@@ -9,11 +9,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ProfesorDto {
-
+public class CrearProfesorDto {
     private Long id;
-    private String nombreCompleto; //Aqui combinare el Nombre y apellido de profesor
+    private String nombre;
+    private String apellido;
     private char sexo;
     private Boolean estado;
-
 }
